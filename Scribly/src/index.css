@@ -1,0 +1,87 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+@import "tailwindcss/theme";
+
+/* Global resets */
+* {
+  @apply m-0 p-0 box-border;
+}
+
+body {
+  @apply font-sans relative;
+}
+
+.size {
+  @apply w-[95%] md:w-[90%] mx-auto;
+}
+
+.shadows {
+  box-shadow: 0px 0px 3px 0.3px rgb(182, 182, 182);
+}
+
+.btn {
+  @apply px-3 p-2 text-sm font-medium;
+}
+
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.write .ql-editor {
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
+/* Add these styles to your CSS file or use Tailwind equivalent classes */
+
+/* Line clamp utility - if not available in your Tailwind */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2; /* Add this line */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; /* Add this line */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Smooth transitions for hover effects */
+.transition-opacity {
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Custom grid for trending posts */
+@media (min-width: 768px) {
+  .trending-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .trending-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Profile image hover effects */
+.profile-image-container:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Post title hover effects */
+.post-title:hover {
+  color: #1a73e8;
+  transition: color 0.2s ease-in-out;
+}
