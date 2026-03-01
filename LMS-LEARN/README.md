@@ -1,97 +1,12 @@
-# 🎓 Learning Management System (LMS)
+# React + Vite
 
-A powerful and intuitive **web-based LMS** designed to connect students, instructors, and administrators in one seamless platform. It simplifies course delivery, progress tracking, and overall learning management with modern tools.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## ✨ Key Highlights
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- 🔐 **Secure Authentication** – Role-based login for Students, Instructors, and Admins.  
-- 📚 **Course Handling** – Add, edit, or remove courses with ease.  
-- 🧑‍🎓 **Student Panel** – Access enrolled courses, monitor progress, and download resources.  
-- 👨‍🏫 **Instructor Panel** – Manage courses, upload study materials, and track student performance.  
-- 💬 **Engaged Learning** – Assignments, discussions, and resource sharing for better collaboration.  
-- 📱 **Mobile-Friendly UI** – Clean, modern, and responsive design.  
+## Expanding the ESLint configuration
 
----
-
-## 🛠️ Technology Stack
-
-- **Frontend:** React.js + Tailwind CSS  
-- **Backend:** Node.js + Express.js  
-- **Database:** MongoDB  
-- **Auth:** JSON Web Tokens (JWT)  
-
----
-
-## 📂 Project Layout  
-
-```text
-LMS/
-├── client/              # React frontend
-│   ├── public/          # Static assets (favicon, logo, etc.)
-│   ├── src/             # Source code
-│   │   ├── assets/      # Images, icons
-│   │   ├── components/  # Reusable UI components
-│   │   ├── context/     # React context (Auth, Cart, etc.)
-│   │   ├── pages/       # App pages (Login, Courses, Dashboard)
-│   │   ├── routes/      # Route guards, protected routes
-│   │   └── services/    # API calls (Axios)
-│   └── package.json     # Frontend dependencies
-│
-├── server/              # Node.js + Express backend
-│   ├── config/          # DB connection, JWT config
-│   ├── controllers/     # Request handlers (Auth, Courses, Quiz)
-│   ├── middleware/      # Auth, error handling
-│   ├── models/          # MongoDB schemas
-│   ├── routes/          # API routes
-│   ├── utils/           # Helpers (validators, token)
-│   └── server.js        # App entry
-│
-├── .gitignore
-└── README.md
-
-
-
-
----
-
-## ⚙️ Getting Started
-
-### 1️⃣ Clone Repository
-```bash
-git clone https://github.com/anjali-rayy/LMS-LEARN.git
-cd LMS-LEARN
-
-2️⃣ Install Dependencies
-# Frontend
-cd client
-npm install
-
-# Backend
-cd ../server
-npm install
-
-3️⃣ Configure Environment
-
-Create a .env file inside the server/ folder:
-
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-
-4️⃣ Run the Project
-
-Open two terminals:
-
-# Start backend
-cd server
-npm start
-
-# Start frontend
-cd client
-npm run dev
-
-👩‍💻 Author
-
-Crafted with ❤️ by Anjali Ray
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
